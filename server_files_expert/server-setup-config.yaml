@@ -87,7 +87,10 @@ install:
     # This is a list of files, each ' - ' is a new file:
     # url is the directlink to the file, destination is the path to where the file should be copied to
     additionalFiles:
-        ~
+        - url: https://edge.forgecdn.net/files/3441/117/iceandfire-2.1.9-1.16.5.jar
+          destination: mods/iceandfire-2.1.9-1.16.5.jar
+        - url: https://edge.forgecdn.net/files/3107/340/VivecraftForgeExtensions-1.16.4-1.3.3.jar
+          destination: mods/VivecraftForgeExtensions-1.16.4-1.3.3.jar
         #- url: https://media.forgecdn.net/files/2844/278/restrictedportals-1.15-1.0.jar
         #  destination: mods/restrictedportals-1.15-1.0.jar
         #- url: https://media.forgecdn.net/files/2874/966/Morpheus-1.15.2-4.2.46.jar
@@ -135,10 +138,10 @@ launch:
     checkOffline: false
 
     # specifies the max amount of ram the server is supposed to launch with
-    maxRam: 5G
+    maxRam: 6500M
 
     # specifies the min amount of ram the server is supposed to launch with
-    minRam: 2G
+    minRam: 6500M
 
     # specifies whether the server is supposed to auto restart after crash
     autoRestart: true
