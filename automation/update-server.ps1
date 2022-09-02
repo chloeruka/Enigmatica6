@@ -42,17 +42,6 @@ function Update-IsAvailable {
 	git fetch
 	$commitsBehind = git rev-list --left-only --count "origin/$targetBranch...$targetBranch" 
 
-	if ($commitsBehind -gt 0) {
-		Write-Host "********************************************************************" -ForegroundColor Red
-		Write-Host
-		Write-Host "An update is available." -ForegroundColor Green
-		Write-Host
-		Write-Host "Please make sure the Minecraft Server is offline before you continue." -ForegroundColor Red
-		Write-Host
-		Write-Host "********************************************************************" -ForegroundColor Red
-		Read-Host -Prompt "Press any key to continue or CTRL+C to quit" 
-	}
-
 	return $commitsBehind -ne 0
 }
 
